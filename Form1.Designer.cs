@@ -1,6 +1,6 @@
 ﻿namespace Enumer
 {
-    partial class Form1
+    partial class Enumer
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -28,13 +28,93 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.initIndexLabel = new System.Windows.Forms.Label();
+            this.frontTextLabel = new System.Windows.Forms.Label();
+            this.MainTextBox = new System.Windows.Forms.TextBox();
+            this.initCount = new System.Windows.Forms.NumericUpDown();
+            this.runButton = new System.Windows.Forms.Button();
+            this.frontText = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.initCount)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // initIndexLabel
+            // 
+            this.initIndexLabel.AutoSize = true;
+            this.initIndexLabel.Location = new System.Drawing.Point(44, 231);
+            this.initIndexLabel.Name = "initIndexLabel";
+            this.initIndexLabel.Size = new System.Drawing.Size(41, 12);
+            this.initIndexLabel.TabIndex = 0;
+            this.initIndexLabel.Text = "初期値";
+            // 
+            // frontTextLabel
+            // 
+            this.frontTextLabel.AutoSize = true;
+            this.frontTextLabel.Location = new System.Drawing.Point(10, 204);
+            this.frontTextLabel.Name = "frontTextLabel";
+            this.frontTextLabel.Size = new System.Drawing.Size(75, 12);
+            this.frontTextLabel.TabIndex = 1;
+            this.frontTextLabel.Text = "直前の文字列";
+            // 
+            // MainTextBox
+            // 
+            this.MainTextBox.Location = new System.Drawing.Point(12, 12);
+            this.MainTextBox.Multiline = true;
+            this.MainTextBox.Name = "MainTextBox";
+            this.MainTextBox.Size = new System.Drawing.Size(260, 183);
+            this.MainTextBox.TabIndex = 2;
+            // 
+            // initCount
+            // 
+            this.initCount.Location = new System.Drawing.Point(91, 228);
+            this.initCount.Name = "initCount";
+            this.initCount.Size = new System.Drawing.Size(100, 19);
+            this.initCount.TabIndex = 3;
+            // 
+            // runButton
+            // 
+            this.runButton.Location = new System.Drawing.Point(197, 226);
+            this.runButton.Name = "runButton";
+            this.runButton.Size = new System.Drawing.Size(75, 23);
+            this.runButton.TabIndex = 4;
+            this.runButton.Text = "列挙";
+            this.runButton.UseVisualStyleBackColor = true;
+            this.runButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // frontText
+            // 
+            this.frontText.Location = new System.Drawing.Point(91, 201);
+            this.frontText.Name = "frontText";
+            this.frontText.Size = new System.Drawing.Size(181, 19);
+            this.frontText.TabIndex = 5;
+            // 
+            // Enumer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.frontText);
+            this.Controls.Add(this.runButton);
+            this.Controls.Add(this.initCount);
+            this.Controls.Add(this.MainTextBox);
+            this.Controls.Add(this.frontTextLabel);
+            this.Controls.Add(this.initIndexLabel);
+            this.Name = "Enumer";
+            this.Text = "Enumer";
+            this.Load += new System.EventHandler(this.Enumer_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.initCount)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label initIndexLabel;
+        private System.Windows.Forms.Label frontTextLabel;
+        private System.Windows.Forms.TextBox MainTextBox;
+        private System.Windows.Forms.NumericUpDown initCount;
+        private System.Windows.Forms.Button runButton;
+        private System.Windows.Forms.TextBox frontText;
     }
 }
 
