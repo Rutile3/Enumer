@@ -39,6 +39,7 @@
             // 
             // initIndexLabel
             // 
+            this.initIndexLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.initIndexLabel.AutoSize = true;
             this.initIndexLabel.Location = new System.Drawing.Point(44, 231);
             this.initIndexLabel.Name = "initIndexLabel";
@@ -48,6 +49,7 @@
             // 
             // frontTextLabel
             // 
+            this.frontTextLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.frontTextLabel.AutoSize = true;
             this.frontTextLabel.Location = new System.Drawing.Point(10, 204);
             this.frontTextLabel.Name = "frontTextLabel";
@@ -57,47 +59,61 @@
             // 
             // MainTextBox
             // 
+            this.MainTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MainTextBox.Location = new System.Drawing.Point(12, 12);
             this.MainTextBox.Multiline = true;
             this.MainTextBox.Name = "MainTextBox";
-            this.MainTextBox.Size = new System.Drawing.Size(260, 183);
-            this.MainTextBox.TabIndex = 2;
+            this.MainTextBox.Size = new System.Drawing.Size(200, 183);
+            this.MainTextBox.TabIndex = 1;
             // 
             // initCount
             // 
+            this.initCount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.initCount.Location = new System.Drawing.Point(91, 228);
             this.initCount.Name = "initCount";
-            this.initCount.Size = new System.Drawing.Size(100, 19);
+            this.initCount.Size = new System.Drawing.Size(40, 19);
             this.initCount.TabIndex = 3;
+            this.initCount.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // runButton
             // 
-            this.runButton.Location = new System.Drawing.Point(197, 226);
+            this.runButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.runButton.Location = new System.Drawing.Point(137, 226);
             this.runButton.Name = "runButton";
             this.runButton.Size = new System.Drawing.Size(75, 23);
             this.runButton.TabIndex = 4;
             this.runButton.Text = "列挙";
             this.runButton.UseVisualStyleBackColor = true;
-            this.runButton.Click += new System.EventHandler(this.button1_Click);
+            this.runButton.Click += new System.EventHandler(this.runButton_Click);
             // 
             // frontText
             // 
+            this.frontText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.frontText.Location = new System.Drawing.Point(91, 201);
             this.frontText.Name = "frontText";
-            this.frontText.Size = new System.Drawing.Size(181, 19);
-            this.frontText.TabIndex = 5;
+            this.frontText.Size = new System.Drawing.Size(121, 19);
+            this.frontText.TabIndex = 2;
             // 
             // Enumer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(224, 261);
             this.Controls.Add(this.frontText);
             this.Controls.Add(this.runButton);
             this.Controls.Add(this.initCount);
             this.Controls.Add(this.MainTextBox);
             this.Controls.Add(this.frontTextLabel);
             this.Controls.Add(this.initIndexLabel);
+            this.MinimumSize = new System.Drawing.Size(240, 140);
             this.Name = "Enumer";
             this.Text = "Enumer";
             this.Load += new System.EventHandler(this.Enumer_Load);

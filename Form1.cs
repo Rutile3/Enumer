@@ -15,6 +15,7 @@ namespace Enumer{
         }
 
         private void Enumer_Load(object sender, EventArgs e) {
+#if DEBUG
             StringBuilder tmp = new StringBuilder();
             tmp.AppendLine("row(");
             tmp.AppendLine("row(123");
@@ -24,11 +25,13 @@ namespace Enumer{
             tmp.AppendLine("row(123)");
             tmp.AppendLine("rows()");
             tmp.AppendLine("rows(123)");
+            tmp.AppendLine("row(");
             MainTextBox.Text = tmp.ToString();
             frontText.Text = "row(";
+#endif
         }
 
-        private void button1_Click(object sender, EventArgs e){
+        private void runButton_Click(object sender, EventArgs e){
             string[] rows = MainTextBox.Text.Split('\n');
             string front_text = frontText.Text;
 
