@@ -24,36 +24,43 @@ namespace Enumer{
             tmp.AppendLine("row(123)");
             tmp.AppendLine("rows()");
             tmp.AppendLine("rows(123)");
-            frontText.Text = "row(";
             MainTextBox.Text = tmp.ToString();
             frontText.Text = "row(";
         }
 
         private void button1_Click(object sender, EventArgs e){
-            string[] list = MainTextBox.Text.Split('\n');
+            string[] rows = MainTextBox.Text.Split('\n');
             string front_text = frontText.Text;
 
             StringBuilder result = new StringBuilder();
             int enum_count = (int)initCount.Value;
-            foreach (string row in list) {
-                int index = row.IndexOf(front_text);
+            for(int i = 0; i < rows.Length; i++){ 
+                int index = rows[i].IndexOf(front_text);
                 if (index != -1){
                     index += front_text.Length;
-                    result.Append(row.Substring(0, index));
-                    result.Append(enum_count);
-
-                    while('0' <= row[index]  && row[index] <= '9'){
-                        index++;
+                    result.Append(rows[i].Substring(0, index)); //列挙部の前
+                    result.Append(enum_count);                  //列挙部
+                    try{                                        //列挙部の後ろ
+                        while ('0' <= rows[i][index] && rows[i][index] <= '9') {
+                            index++;
+                        }
+                        result.Append(rows[i].Substring(index));
+                    }
+                    catch(IndexOutOfRangeException){
+                        //列挙部以降に文字がない場合を想定して
                     }
 
-                    result.Append(row.Substring(index));
                     enum_count++;
                 }
                 else{
-                    result.Append(row);
+                    result.Append(rows[i]);
                 }
-                result.Append("\r\n");
+
+                if(i < rows.Length - 1) {//最終行のみ改行しない
+                    result.Append("\r\n");
+                }
             }
+
             MainTextBox.Text = result.ToString();
         }
     }
