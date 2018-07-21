@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Enumer")]
 [assembly: AssemblyDescription("特定の文字列の後ろに数字を列挙し挿入するツール")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Rutile")]
+[assembly: AssemblyCompany("Rutile3")]
 [assembly: AssemblyProduct("Enumer")]
 [assembly: AssemblyCopyright("Copyright © Rutile 2018")]
 [assembly: AssemblyTrademark("")]
