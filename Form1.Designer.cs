@@ -76,11 +76,6 @@
             this.initCount.Name = "initCount";
             this.initCount.Size = new System.Drawing.Size(40, 19);
             this.initCount.TabIndex = 3;
-            this.initCount.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             // 
             // runButton
             // 
